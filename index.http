@@ -1,0 +1,52 @@
+GET  http://localhost:8080/api/v1/dashboard HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJqb25oIiwiaWF0IjoxNjkwOTMxNjUyLCJleHAiOjE2OTM1MjM2NTJ9.GX9-FTf_7nQOmbH1ZvorQU4Vq0FttXfnmJo1lQDXDoM
+Accept: application/json
+###
+POST http://localhost:8080/api/v1/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"peter",
+    "email":"peter3@email.com",
+    "password":"secret"
+}
+###
+POST http://localhost:8080/api/v1/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"peter3@email.com",
+    "password":"secret"
+}
+###
+POST http://localhost:8080/api/v1/jobs HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNlNzg3ZGU3NzAzY2U3NjQxMDM1YTAiLCJuYW1lIjoicGV0ZXIiLCJpYXQiOjE2OTEyNTQ1NDMsImV4cCI6MTY5Mzg0NjU0M30.a_0xZK8wooN5eL936NzWWurpi37XLft5YTxfwlgCNC0
+Accept: application/json
+Content-Type: application/json
+
+{
+    "company":"netflix",
+    "position":"back-end developer"
+}
+###
+GET http://localhost:8080/api/v1/jobs HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNlNzg3ZGU3NzAzY2U3NjQxMDM1YTAiLCJuYW1lIjoicGV0ZXIiLCJpYXQiOjE2OTEyNTQ1NDMsImV4cCI6MTY5Mzg0NjU0M30.a_0xZK8wooN5eL936NzWWurpi37XLft5YTxfwlgCNC0
+Accept: application/json
+###
+GET http://localhost:8080/api/v1/jobs/64cef65dfcc8a470539b854d HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNlNzg3ZGU3NzAzY2U3NjQxMDM1YTAiLCJuYW1lIjoicGV0ZXIiLCJpYXQiOjE2OTEyNTQ1NDMsImV4cCI6MTY5Mzg0NjU0M30.a_0xZK8wooN5eL936NzWWurpi37XLft5YTxfwlgCNC0
+Accept: application/json
+###
+PATCH  http://localhost:8080/api/v1/jobs/64cef65dfcc8a470539b854d HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNlNzg3ZGU3NzAzY2U3NjQxMDM1YTAiLCJuYW1lIjoicGV0ZXIiLCJpYXQiOjE2OTEyNTQ1NDMsImV4cCI6MTY5Mzg0NjU0M30.a_0xZK8wooN5eL936NzWWurpi37XLft5YTxfwlgCNC0
+Accept: application/json
+Content-Type: application/json
+
+{
+    "company":"amazon",
+    "position":"front-end developer"
+}
+###
+DELETE  http://localhost:8080/api/v1/jobs/64cef65dfcc8a470539b854d HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNlNzg3ZGU3NzAzY2U3NjQxMDM1YTAiLCJuYW1lIjoicGV0ZXIiLCJpYXQiOjE2OTEyNTQ1NDMsImV4cCI6MTY5Mzg0NjU0M30.a_0xZK8wooN5eL936NzWWurpi37XLft5YTxfwlgCNC0
+Accept: application/json
